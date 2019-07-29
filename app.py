@@ -4,6 +4,7 @@ from flask_mysqldb import MySQL
 app = Flask(__name__)
 
 @app.route('/')
+@app.route('/<path:path>')
 def Index():
     return render_template('index.html')
 
